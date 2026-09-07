@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Traffic AI System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-10">
+
+  <h1 class="text-3xl font-bold mb-6">🚦 Traffic Management System</h1>
+
+  <!-- INPUT SECTION -->
+  <div class="bg-white p-4 rounded shadow mb-6">
+
+    <input id="start" class="border p-2 mr-2" placeholder="Start Location">
+
+    <input id="end" class="border p-2 mr-2" placeholder="End Location">
+
+    <select id="condition" class="border p-2 mr-2">
+      <option value="normal">Normal</option>
+      <option value="accident">Accident</option>
+      <option value="roadblock">Roadblock</option>
+    </select>
+
+    <label class="ml-2">
+      <input type="checkbox" id="emergency"> Emergency Vehicle
+    </label>
+
+    <button onclick="simulateTraffic()" 
+      class="bg-blue-500 text-white px-4 py-2 rounded ml-4">
+      Simulate Traffic
+    </button>
+
+  </div>
+
+  <!-- OUTPUT SECTION -->
+  <div class="bg-white p-4 rounded shadow">
+
+    <p><b>🚗 Route:</b> <span id="route">-</span></p>
+    <p><b>📊 Traffic:</b> <span id="traffic">-</span></p>
+    <p><b>⚠️ Decision:</b> <span id="decision">-</span></p>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
